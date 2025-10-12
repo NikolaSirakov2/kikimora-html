@@ -68,14 +68,14 @@ body {
 .animated-bg .grid-overlay svg {
   position: absolute;
   inset: 0;
-  opacity: 0.4;
+  opacity: 0.15;
   animation: pulse-grid 4s ease-in-out infinite;
 }
 
 .animated-bg .grid-overlay svg path {
   stroke: rgb(59, 130, 246) !important;
-  stroke-width: 1 !important;
-  opacity: 0.6 !important;
+  stroke-width: 0.3 !important;
+  opacity: 0.2 !important;
 }
 
 /* Floating particles effect */
