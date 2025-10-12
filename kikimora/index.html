@@ -24,6 +24,7 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/animated-bg.css">
 </head>
 
 <body>
@@ -232,7 +233,31 @@
    <div id="smooth-wrapper">
       <div id="smooth-content">
 
-         <main class="fix">
+         <!-- Animated Background Wrapper -->
+         <div class="animated-bg">
+            <!-- Background glow effects -->
+            <div class="bg-glow-1"></div>
+            <div class="bg-glow-2"></div>
+            <div class="bg-glow-3"></div>
+            
+            <!-- Grid pattern overlay -->
+            <div class="grid-overlay">
+               <svg width="100%" height="100%">
+                  <defs>
+                     <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                        <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgb(59, 130, 246)" stroke-width="0.5" opacity="0.3"/>
+                     </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)"/>
+               </svg>
+            </div>
+            
+            <!-- Floating particles -->
+            <div class="particles" id="particles-container"></div>
+            
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+               <main class="fix">
             
             <!-- tp-slider-area-start -->
             <div class="tp-hero__area tp-hero__pl-pr">
@@ -1747,7 +1772,9 @@
             <!-- tp-price-area-end -->
 
 
-         </main>
+               </main>
+            </div>
+         </div>
 
          <footer class="pb-50">
             <!-- tp-footer-area-start -->
@@ -1950,6 +1977,29 @@
    <script src="assets/js/ScrollSmoother.min.js"></script>
    <script src="assets/js/split-text.min.js"></script>
    <script src="assets/js/main.js"></script>
+   
+   <!-- Animated Background Particles Script -->
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         const particlesContainer = document.getElementById('particles-container');
+         
+         // Create 20 floating particles
+         for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Random positioning
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            
+            // Random animation delay and duration
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            particle.style.animationDuration = (2 + Math.random() * 3) + 's';
+            
+            particlesContainer.appendChild(particle);
+         }
+      });
+   </script>
 
 </body>
 
