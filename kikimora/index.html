@@ -99,6 +99,22 @@
          .header-bottom__main-menu nav ul li:hover .submenu {
             transform: scaleY(1) translateY(-5px) !important;
          }
+         
+         /* Fix for text visibility in header top */
+         .header-top__link span {
+            color: white !important;
+         }
+         
+         /* Remove white background from header bottom area */
+         .header-bottom__area {
+            background-color: transparent !important;
+         }
+         
+         /* Make hero background div take 80% of screen width */
+         .tp-hero-bg.tp-hero-bg-single {
+            width: 80% !important;
+            margin: 0 auto !important;
+         }
       </style>
       <header class="header-bottom__transparent z-index-6 tp-header-height">
 
@@ -263,7 +279,6 @@
             <div class="tp-hero__area tp-hero__pl-pr">
                <div class="tp-hero__bg p-relative">
                   <div class="tp-hero-bg tp-hero-bg-single">
-                     <img src="assets/img/hero/hero-frame.png" alt="">
                   </div>
                   <div class="tp-hero-shape">
                      <img class="tp-hero-shape-1" src="assets/img/hero/hero-line-shape.png" alt="">
