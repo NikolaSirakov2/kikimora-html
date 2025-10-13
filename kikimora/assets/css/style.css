@@ -1093,6 +1093,12 @@ input[type=color] {
 .tp-btn-hover.alt-color-white b {
   background-color: var(--tp-common-white);
 }
+.tp-btn-hover.alt-color-black span {
+  color: var(--tp-common-black);
+}
+.tp-btn-hover.alt-color-black:hover span {
+  color: var(--tp-common-white);
+}
 
 .tp-btn-price {
   display: inline-block;
@@ -3306,6 +3312,16 @@ input[type=color] {
   font-weight: 700;
   font-size: 50px;
   line-height: 1.2;
+  color: var(--tp-common-black);
+}
+.tp-project__section-box .tp-section-title {
+  color: var(--tp-common-black) !important;
+}
+.tp-project__area .tp-project__section-box .tp-section-title {
+  color: var(--tp-common-black) !important;
+}
+.grey-bg .tp-project__section-box .tp-section-title {
+  color: #000000 !important;
 }
 .tp-section-title span {
   color: var(--tp-theme-3);
@@ -5888,15 +5904,16 @@ input[type=color] {
   }
 }
 .tp-feature__item {
-  background: #FFFFFF;
+  background: #2A2A2A;
   box-shadow: 0px 1px 3px rgba(18, 20, 32, 0.2);
   border-radius: 30px;
   padding: 50px 40px;
   transition: 0.3s;
 }
 .tp-feature__item:hover {
-  box-shadow: 0px 20px 30px rgba(1, 6, 20, 0.1);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
+  transform: translateY(-5px);
 }
 .tp-feature__item:hover .tp-feature__icon img {
   transform: scaleX(-1);
@@ -5912,6 +5929,7 @@ input[type=color] {
   font-size: 24px;
   line-height: 1.3;
   padding-bottom: 20px;
+  color: #FFFFFF;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-feature__title-sm {
@@ -7389,6 +7407,7 @@ input[type=color] {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+  color: #555555;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-about__section-box p {
@@ -7405,7 +7424,7 @@ input[type=color] {
   position: relative;
   padding-left: 30px;
   margin-bottom: 30px;
-  color: var(--tp-common-black);
+  color: #FFFFFF;
   list-style-type: none;
 }
 .tp-about__list ul li:last-child {
@@ -9148,6 +9167,7 @@ input[type=color] {
   padding-bottom: 37px;
   margin-bottom: 38px;
   padding-right: 12px;
+  color: #555555;
 }
 @media (max-width: 767px) {
   .tp-project__title-box p {
@@ -9155,6 +9175,7 @@ input[type=color] {
     padding-right: 0;
     padding-bottom: 30px;
     margin-bottom: 30px;
+    color: #555555;
   }
 }
 .tp-project__author-info {
@@ -9163,7 +9184,7 @@ input[type=color] {
 .tp-project__author-info span {
   font-weight: 500;
   font-size: 14px;
-  color: var(--tp-grey-2);
+  color: #555555;
   padding-bottom: 8px;
   display: inline-block;
 }
@@ -9193,7 +9214,7 @@ input[type=color] {
 .tp-project__budget span {
   font-weight: 500;
   font-size: 14px;
-  color: var(--tp-grey-2);
+  color: #555555;
   padding-bottom: 8px;
   display: inline-block;
 }
