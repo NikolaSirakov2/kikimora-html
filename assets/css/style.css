@@ -179,7 +179,7 @@ ul {
 }
 
 p {
-  color: var(--tp-text-body);
+  color: #2C2C2C;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -13079,6 +13079,7 @@ input[type=color] {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+  color: #2C2C2C;
 }
 @media (max-width: 767px) {
   .tp-testimonial__increase p {
