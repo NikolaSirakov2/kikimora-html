@@ -1,0 +1,60 @@
+.animated-bg {
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  /* Animated glow effects */
+  .animated-bg::before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    height: 500px;
+    width: 500px;
+    border-radius: 9999px;
+    background-color: rgba(59, 130, 246, 0.2);
+    filter: blur(24px);
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animated-bg::after {
+    content: '';
+    position: absolute;
+    right: 25%;
+    top: 33%;
+    height: 400px;
+    width: 400px;
+    border-radius: 9999px;
+    background-color: rgba(168, 85, 247, 0.15);
+    filter: blur(24px);
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 1s;
+  }
+  
+  /* Bottom gradient */
+  .animated-bg {
+    background-image: linear-gradient(to top, rgba(37, 99, 235, 0.3), transparent);
+    background-position: bottom;
+    background-size: 100% 128px;
+    background-repeat: no-repeat;
+  }
+  
+  /* Grid overlay */
+  .animated-bg {
+    background-image: 
+      linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.5)),
+      linear-gradient(to right, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px);
+    background-size: 100% 100%, 50px 50px, 50px 50px;
+    background-position: 0 0, 0 0, 0 0;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+
+  
+  /* Ensure content stays above background */
+  .animated-bg > * {
+    position: relative;
+    z-index: 1;
+  }
