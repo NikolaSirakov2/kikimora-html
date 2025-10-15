@@ -4,7 +4,7 @@
     background-color: black;
   }
   
-  /* Animated glow effects */
+  /* Animated glow effects - reduced intensity */
   .animated-bg::before {
     content: '';
     position: absolute;
@@ -13,9 +13,9 @@
     height: 500px;
     width: 500px;
     border-radius: 9999px;
-    background-color: rgba(59, 130, 246, 0.2);
+    background-color: rgba(59, 130, 246, 0.1);
     filter: blur(24px);
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   
   .animated-bg::after {
@@ -26,10 +26,10 @@
     height: 400px;
     width: 400px;
     border-radius: 9999px;
-    background-color: rgba(168, 85, 247, 0.15);
+    background-color: rgba(168, 85, 247, 0.08);
     filter: blur(24px);
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    animation-delay: 1s;
+    animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 2s;
   }
   
   /* Bottom gradient */
@@ -48,7 +48,7 @@
       linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px);
     background-size: 100% 100%, 50px 50px, 50px 50px;
     background-position: 0 0, 0 0, 0 0;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    /* Removed animation to prevent color changes */
   }
   
 
@@ -57,4 +57,16 @@
   .animated-bg > * {
     position: relative;
     z-index: 1;
+  }
+
+  /* Subtle pulse animation */
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.02);
+    }
   }

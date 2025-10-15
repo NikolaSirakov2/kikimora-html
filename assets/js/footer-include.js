@@ -3,7 +3,7 @@ const footerHTML = `
 <footer class="pb-30">
    <!-- tp-footer-area-start -->
    <div class="tp-footer__pl-pr p-relative">
-      <div class="footer-black-bg tp-gsap-bg"></div>
+      <div class="footer-black-bg"></div>
       <div class="tp-footer__area pt-30">
          <div class="container">
             <div class="tp-footer__top-space">
